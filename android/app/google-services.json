@@ -7,63 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:255452747282:android:8b6b391bda5aaa9399eacb",
-        "android_client_info": {
-          "package_name": "com.example.uber_driver_app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:255452747282:android:1c1c8e685cae370a99eacb",
-        "android_client_info": {
-          "package_name": "com.example.uber_rider_app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:255452747282:android:01d7fbdea9ae1b9199eacb",
-        "android_client_info": {
-          "package_name": "com.flutterfairy.citycab"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:255452747282:android:d41c22394e02dcdb99eacb",
         "android_client_info": {
           "package_name": "com.incc.taxischrono.app"
