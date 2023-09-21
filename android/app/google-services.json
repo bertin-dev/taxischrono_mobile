@@ -1,15 +1,35 @@
 {
   "project_info": {
     "project_number": "255452747282",
+    "firebase_url": "https://taxi-chrono-firebase-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "taxi-chrono-firebase",
     "storage_bucket": "taxi-chrono-firebase.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:255452747282:android:d41c22394e02dcdb99eacb",
+        "mobilesdk_app_id": "1:255452747282:android:f02fe1b52f8f79b199eacb",
         "android_client_info": {
-          "package_name": "com.incc.taxischrono.app"
+          "package_name": "com.incc.taxischronoDriver.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255452747282:android:53c54f3788f4a62899eacb",
+        "android_client_info": {
+          "package_name": "com.incc.taxischronoUser.app"
         }
       },
       "oauth_client": [],

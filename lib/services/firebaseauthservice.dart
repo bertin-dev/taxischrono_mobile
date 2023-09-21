@@ -98,8 +98,8 @@ class Authservices extends ChangeNotifier {
       if (util.user != null) {
         // final actioncodeSettigns = ActionCodeSettings(
         //   url: 'https://www.incc.taxischrono.app/?email=${util.user!.email}',
-        //   androidPackageName: "com.incc.taxischrono.app",
-        //   iOSBundleId: "com.incc.taxischrono.app",
+        //   androidPackageName: "com.incc.taxischronoUser.app",
+        //   iOSBundleId: "com.incc.taxischronoUser.app",
         //   androidInstallApp: true,
         //   handleCodeInApp: true,
         // );

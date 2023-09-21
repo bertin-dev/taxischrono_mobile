@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:taxischrono/firebase_options.dart';
 import 'package:taxischrono/screens/homepage.dart';
 
+import 'screens/auths/login_page.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -24,7 +26,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      // home:  HomePage(),
+      home: LoginPage(),
     );
   }
 }

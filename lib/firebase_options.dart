@@ -63,9 +63,18 @@ class DefaultFirebaseOptions {
   // );
 
 // new
+
+  // static const FirebaseOptions android = FirebaseOptions(
+  //   apiKey: 'AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4',
+  //   appId: '1:255452747282:android:d41c22394e02dcdb99eacb',
+  //   messagingSenderId: '255452747282',
+  //   projectId: 'taxi-chrono-firebase',
+  //   storageBucket: 'taxi-chrono-firebase.appspot.com',
+  // );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDx0VVYSYc3OgedqVZ94DkkpN55QMlvaM4',
-    appId: '1:255452747282:android:d41c22394e02dcdb99eacb',
+    appId: '1:255452747282:android:53c54f3788f4a62899eacb',
     messagingSenderId: '255452747282',
     projectId: 'taxi-chrono-firebase',
     storageBucket: 'taxi-chrono-firebase.appspot.com',
@@ -81,7 +90,7 @@ class DefaultFirebaseOptions {
         '388406613111-4ama9814rmq80k2ikfg1is3dl8pqd4sa.apps.googleusercontent.com',
     iosClientId:
         '388406613111-grs0geujeucqj4d4acpqk8k02f9qbvju.apps.googleusercontent.com',
-    iosBundleId: 'com.incc.taxischrono.app',
+    iosBundleId: 'com.incc.taxischronoUser.app',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -94,6 +103,6 @@ class DefaultFirebaseOptions {
         '388406613111-4ama9814rmq80k2ikfg1is3dl8pqd4sa.apps.googleusercontent.com',
     iosClientId:
         '388406613111-grs0geujeucqj4d4acpqk8k02f9qbvju.apps.googleusercontent.com',
-    iosBundleId: 'com.incc.taxischrono.app',
+    iosBundleId: 'com.incc.taxischronoUser.app',
   );
 }
