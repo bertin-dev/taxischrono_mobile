@@ -11,7 +11,7 @@ import '../autres/reservation.dart';
 import '../autres/transaction.dart';
 import '../discutions/conversation.dart';
 import '../discutions/message.dart';
-
+import 'package:logger/logger.dart';
 import 'client.dart';
 
 class ApplicationUser {
@@ -334,6 +334,7 @@ class ApplicationUser {
         },
         verificationFailed: (FirebaseAuthException except) {
           debugPrint(except.code);
+          Logger().d(except.code);
 
           toaster(
               message: "Erreur d'enrégistrement Veillez réssayer",
@@ -345,6 +346,7 @@ class ApplicationUser {
       );
     } catch (e) {
       debugPrint(e.toString());
+      Logger().d(e.toString());
       toaster(
           message: "Erreur d'enrégistrement Veillez réssayer",
           color: Colors.red,

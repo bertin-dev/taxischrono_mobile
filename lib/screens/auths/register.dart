@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:logger/logger.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:taxischrono/modeles/applicationuser/appliactionuser.dart';
 import 'package:taxischrono/screens/composants/delayed_animation.dart';
@@ -246,7 +247,7 @@ class _SignupPageState extends State<SignupPage> {
               controller: controllerEmail,
               validator: (val) {
                 return val == null
-                    ? "L'email est obligatoir"
+                    ? "L'email est obligatoire"
                     : !isEmail(val)
                         ? "Entrer une adresse email valide"
                         : null;
@@ -372,7 +373,7 @@ class _SignupPageState extends State<SignupPage> {
           setState(() {
             FocusScope.of(keyscafold.currentContext!).unfocus();
           });
-          keyscafold.currentState!.showBottomSheet((context) {
+          /*keyscafold.currentState!.showBottomSheet((context) {
             return Container(
               height: 300,
               width: double.infinity,
@@ -414,7 +415,7 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               ),
             );
-          });
+          });*/
         } else {
           ApplicationUser chauffeur = ApplicationUser(
             userAdresse: controllerAdresse.text,
@@ -423,6 +424,7 @@ class _SignupPageState extends State<SignupPage> {
             userTelephone: numberSubmited!.phoneNumber,
             motDePasse: controllerPasse.text,
           );
+          Logger().i(chauffeur.toJson());
           await ApplicationUser.loginNumber(
             chauffeur,
             context: context,
