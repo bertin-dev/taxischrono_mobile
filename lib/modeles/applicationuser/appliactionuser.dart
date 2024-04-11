@@ -353,6 +353,44 @@ class ApplicationUser {
           long: true);
     }
   }
+
+  static Future userRegister(BuildContext context, {required String email,
+    required String password,
+    required ApplicationUser chauffeur}) async {
+    String? result;
+    try {
+      final userCredential = await authentication.createUserWithEmailAndPassword(
+          email: email, password: password);
+      if (userCredential.user != null) {
+
+        await userCredential.user!.updateEmail(chauffeur.userEmail);
+        await userCredential.user!.updateDisplayName(chauffeur.userName);
+        await userCredential.user!.updatePassword(chauffeur.motDePasse!);
+        await chauffeur.saveUser().then((val) async {
+          await Client(idUser: userCredential.user!.uid, tickets: 0)
+              .register()
+              .then((value) {
+            Navigator.of(context).pushAndRemoveUntil(
+                PageTransition(
+                    child: const HomePage(),
+                    type: PageTransitionType.leftToRight),
+                    (route) => false);
+          });
+        });
+
+        //await util.user!.sendEmailVerification();
+      } else {
+        result = "Erreur pendant l'enregistrement du chauffeur";
+        return result;
+      }
+    } on FirebaseAuthException catch (e) {
+      result = e.code;
+      return result;
+    } on Exception catch (e) {
+      result = e.toString();
+      return result;
+    }
+  }
 // fin de la classe
 
 }

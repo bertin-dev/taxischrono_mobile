@@ -67,15 +67,10 @@ android {
 
     signingConfigs {
         release {
-            /*keyAlias keystoreProperties['keyAlias']
+            keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
             storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-            storePassword keystoreProperties['storePassword']*/
-
-            storeFile file('upload-keystore-incc.jks')
-            storePassword 'chronouserincc'
-            keyAlias 'upload'
-            keyPassword 'chronouserincc'
+            storePassword keystoreProperties['storePassword']
         }
     }
     buildTypes {

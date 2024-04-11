@@ -297,7 +297,7 @@ class _SignupPageState extends State<SignupPage> {
               controller: controllerPasse,
               validator: (val) {
                 return val == null
-                    ? "Le nom est obligatoir"
+                    ? "Le nom est obligatoire"
                     : val.length < 6
                         ? "le mot de passe doit avoir 6 caractères"
                         : null;
@@ -373,7 +373,7 @@ class _SignupPageState extends State<SignupPage> {
           setState(() {
             FocusScope.of(keyscafold.currentContext!).unfocus();
           });
-          /*keyscafold.currentState!.showBottomSheet((context) {
+          keyscafold.currentState!.showBottomSheet((context) {
             return Container(
               height: 300,
               width: double.infinity,
@@ -415,7 +415,7 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               ),
             );
-          });*/
+          });
         } else {
           ApplicationUser chauffeur = ApplicationUser(
             userAdresse: controllerAdresse.text,
@@ -425,7 +425,7 @@ class _SignupPageState extends State<SignupPage> {
             motDePasse: controllerPasse.text,
           );
           Logger().i(chauffeur.toJson());
-          await ApplicationUser.loginNumber(
+          /*await ApplicationUser.loginNumber(
             chauffeur,
             context: context,
             onCodeSend: (verificationId, forceResendingToken) {
@@ -440,7 +440,16 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               );
             },
-          );
+          );*/
+
+          await ApplicationUser.userRegister(context ,email: "${numberSubmited!.phoneNumber}@gmail.com",
+              password: controllerPasse.text, chauffeur: chauffeur).then((value) {
+            if(value != null){
+              toaster(
+                  message: value,
+                  color: Colors.red);
+            }
+          });
 
           loader = false;
           setState(() {});

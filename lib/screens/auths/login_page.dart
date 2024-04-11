@@ -219,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                    DelayedAnimation(
+                    /*DelayedAnimation(
                       delay: 2500,
                       child: ElevatedButton(
                         onPressed: () {
@@ -248,7 +248,7 @@ class _LoginPageState extends State<LoginPage> {
                           ],
                         ),
                       ),
-                    ),
+                    ),*/
                     // const SizedBox(height: 15),
                     // DelayedAnimation(
                     //   delay: 3500,
@@ -366,8 +366,8 @@ class _LoginPageState extends State<LoginPage> {
               child: TextFormField(
                 controller: controllerEmail,
                 decoration: InputDecoration(
-                  icon: const Icon(Icons.email),
-                  labelText: 'Votre e-mail',
+                  icon: const Icon(Icons.phone),
+                  labelText: 'Téléphone ou E-mail',
                   labelStyle: TextStyle(
                     color: Colors.grey[400],
                   ),
